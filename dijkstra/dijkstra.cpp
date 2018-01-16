@@ -26,6 +26,7 @@ dijkstra::~dijkstra()
   
   delete [] cost;
   delete [] prev;
+  delete [] visit;
 }
 
 

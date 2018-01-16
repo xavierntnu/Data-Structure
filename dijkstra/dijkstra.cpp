@@ -23,6 +23,9 @@ dijkstra::~dijkstra()
   for(int i = 0; i<vertex_number; i++)
     delete adjoint[i];
   delete adjoint;
+  
+  delete [] cost;
+  delete [] prev;
 }
 
 

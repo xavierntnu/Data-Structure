@@ -37,6 +37,6 @@ int main()
 
   selectionSort(arr);
   printArr(arr);
-
+  delete [] arr;
   return 0;
 }

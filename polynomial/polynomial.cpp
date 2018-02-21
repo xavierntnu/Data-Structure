@@ -84,6 +84,7 @@ void polynomial::setPolynomial(const char *poly)
         }
         i--;
       }
+
       coef[exp] = coeffi;
       degree = max(degree, exp);
 
@@ -118,6 +119,7 @@ int polynomial::LeadExp(polynomial poly) const
 polynomial polynomial::Add(polynomial poly)
 {
   polynomial d("0");
+  d.degree = max(LeadExp(static_cast<polynomial>(*this)), LeadExp(poly));
   while(!this == 0 && !poly == 0) //in ADT we define operation! which returns 1 if poly is zero, really wierd Uh!
   {
     float sum;
@@ -197,9 +199,9 @@ void polynomial::printResult()
     }
 
   if(coef[degree]==1)
-    cout << "x";
+    cout << "x^" << degree;
   else if(coef[degree] == -1)
-    cout << "-x";
+    cout << "-x^" << degree;
   else
     cout << coef[degree] << "x^" << degree;
 

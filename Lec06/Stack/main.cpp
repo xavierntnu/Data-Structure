@@ -8,7 +8,6 @@ char manual[] = "\n1:push\n2:pop\n3:view\nYour choice: ";
 
 int main()
 {
-//    Stack<int> stackObj(100);
     Stack<int> StackObj(100);
     int choice;
     int push_value, pop_value, *top;

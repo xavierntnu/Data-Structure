@@ -28,6 +28,7 @@ int main()
           if(top!=0)
             cout << "value = " << pop_value << endl;
           break;
+              
         case 3:
           cout << "Please write it by yourself...\n";
           break;
